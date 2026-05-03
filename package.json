@@ -1,0 +1,10 @@
+{
+  "name": "pr-reviewer-github",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install-agent": "node scripts/install-pr-reviewer.mjs",
+    "uninstall-agent": "node scripts/uninstall-pr-reviewer.mjs"
+  }
+}

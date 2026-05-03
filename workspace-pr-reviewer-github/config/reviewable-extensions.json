@@ -1,0 +1,4 @@
+{
+  "extensions": [".py", ".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".go", ".java", ".rs", ".rb", ".kt", ".cs"],
+  "ignoreSuffixes": [".png", ".jpg", ".jpeg", ".gif", ".webp", ".lock", ".map", ".min.js", ".svg", ".ico"]
+}

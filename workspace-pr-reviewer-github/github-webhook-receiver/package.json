@@ -1,0 +1,5 @@
+{
+  "name": "pr-reviewer-github-webhook",
+  "private": true,
+  "type": "module"
+}

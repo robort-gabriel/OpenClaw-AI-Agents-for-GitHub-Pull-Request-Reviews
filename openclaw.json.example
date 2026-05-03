@@ -1,0 +1,71 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai/gpt-5.4-mini"
+      },
+      "sandbox": {
+        "mode": "off"
+      }
+    },
+    "list": [
+      {
+        "id": "pr-reviewer-github",
+        "name": "PR Reviewer (GitHub)",
+        "model": "openai/gpt-5.4-mini",
+        "workspace": "/home/node/.openclaw/workspace-pr-reviewer-github",
+        "agentDir": "/home/node/.openclaw/agents/pr-reviewer-github",
+        "tools": {
+          "profile": "full",
+          "alsoAllow": ["lobster", "llm-task"],
+          "exec": {
+            "host": "gateway",
+            "security": "full",
+            "ask": "off"
+          }
+        }
+      }
+    ]
+  },
+  "plugins": {
+    "entries": {
+      "lobster": { "enabled": true },
+      "llm-task": { "enabled": true }
+    }
+  },
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "mode": "socket",
+      "accounts": {
+        "default": {
+          "enabled": true,
+          "mode": "socket",
+          "appToken": "${SLACK_APP_TOKEN}",
+          "botToken": "${SLACK_BOT_TOKEN}",
+          "userToken": "${SLACK_USER_TOKEN}",
+          "userTokenReadOnly": false,
+          "groupPolicy": "allowlist",
+          "channels": {
+            "YOUR_PR_REVIEW_CHANNEL_ID": { "allow": true }
+          }
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "pr-reviewer-github",
+      "match": {
+        "channel": "slack",
+        "accountId": "default",
+        "peer": { "kind": "channel", "id": "YOUR_PR_REVIEW_CHANNEL_ID" }
+      }
+    }
+  ],
+  "gateway": {
+    "port": 18789,
+    "bind": "lan",
+    "auth": { "mode": "token", "token": "replace-with-openclaw-gateway-token" }
+  }
+}

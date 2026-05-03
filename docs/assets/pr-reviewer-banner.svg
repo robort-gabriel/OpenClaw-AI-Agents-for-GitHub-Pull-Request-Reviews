@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="132" viewBox="0 0 520 132" role="img" aria-labelledby="banner-title banner-desc">
+  <title id="banner-title">GitHub PR Reviewer</title>
+  <desc id="banner-desc">Automated pull request reviews using OpenClaw, Lobster, Slack, and GitHub.</desc>
+  <!-- OpenClaw mascot: github.com/openclaw/openclaw/blob/main/docs/assets/pixel-lobster.svg -->
+  <image xlink:href="openclaw-pixel-lobster.svg" href="openclaw-pixel-lobster.svg" x="20" y="22" width="88" height="88" preserveAspectRatio="xMidYMid meet"/>
+  <text x="124" y="56" fill="#f0f6fc" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="700" letter-spacing="-0.02em">GitHub PR Reviewer</text>
+  <text x="124" y="82" fill="#8b949e" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="500">Webhooks &#183; OpenAI &#183; Slack &#183; Lobster pipeline</text>
+  <text x="124" y="104" fill="#58a6ff" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" font-weight="600">OpenClaw Gateway</text>
+</svg>
